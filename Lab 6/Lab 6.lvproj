@@ -113,6 +113,7 @@ AddOutputFilter chunkFilter
 		</Item>
 		<Item Name="SubVIs" Type="Folder"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
+		<Item Name="PID_Control.vi" Type="VI" URL="../PID_Control.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Calculate Clock Settings.vi" Type="VI" URL="/&lt;vilib&gt;/myRIO/Common/Instrument Driver Framework/Utilities/vis/Calculate Clock Settings.vi"/>
