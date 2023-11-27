@@ -75,6 +75,9 @@ For any touch probe system, measurement capability is an important metric to qua
 
 # Challenges
 ### Wireless Connection
+
+### Mechanical Assembly
+
 ### 
 # Conclusions
 Throughout the process of this project, the 
