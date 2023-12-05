@@ -115,13 +115,14 @@ Finally, a significant challenge was the actual validation process. While the pr
 ## Measurement Validation
 To determine accuracy, an object was placed a known distance away from the probe. The system offset and translation was set to accurately reflect this value. Then, objects were placed at multiple distances and measured. The results were as follows. 
 
-| Actual      | Measured |
-| ----------- | ----------- |
-| 10   | 11.2033     |
-| 15   | 15.861      |
-| 20   | 21.0021     |
-| 25   | 26.4533     |
-| 30   | 30.989      |
+| Actual | Measured |
+| ------- | -------- |
+| 10      | 11.2033  |
+| 15      | 15.861   |
+| 20      | 21.0021  |
+| 25      | 26.4533  |
+| 30      | 30.989   |
+
 
 Notably, measurements were, in every case, larger than the actual. By remeasuring the offset to be 1mm less, the accuracy is within desired 1mm value. 
 
