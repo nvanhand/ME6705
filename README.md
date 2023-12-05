@@ -7,6 +7,8 @@ In order to address this need, Team 1 has chosen to model a 1D Touch probe syste
 
 # Requirements
 ## Table of Requirements
+
+
 | Category | No. | Threshold/ <br> Objective* | Requirement | Value | Unit |
 | :---: | :---: | :---: | :---: | :---: | :---: |
 | Interface | 1 | T | Users shall interface with the prototype via a LabView front panel. | T/F |  |
@@ -42,6 +44,8 @@ In order to address this need, Team 1 has chosen to model a 1D Touch probe syste
 |  | 31 | O | Prototype creativity/uniqueness, as determined by customer (Dr. Noel) | Scale: $1-10$ |  |
 |  | 32 | T | Prototype uses at least 1 advanced mechatronics concept | T/F |  |
 |  | 33 | O | Prototype goes above and beyond with exploring advanced mechatronics concept | T/F |  |
+
+
 ## Discussion 
 The previous section will be discussed in further depth in this section. 
 
@@ -110,6 +114,7 @@ Finally, a significant challenge was the actual validation process. While the pr
 # Conclusions
 ## Measurement Validation
 To determine accuracy, an object was placed a known distance away from the probe. The system offset and translation was set to accurately reflect this value. Then, objects were placed at multiple distances and measured. The results were as follows. 
+
 | Actual      | Measured |
 | ----------- | ----------- |
 | 10   | 11.2033     |
