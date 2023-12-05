@@ -78,8 +78,7 @@ Related to project requirements, the system should function without physical con
 For any touch probe system, measurement capability is an important metric to quantify and report with any product. In all cases, the highest possible accuracy and measurement repeatibility is ideal, however, reasonable thresholds have been set in order to prove out the system. 
 
 # State Machine
-
-![image](https://github.com/nvanhand/ME6705/assets/73389036/bed37813-f38c-4ae2-92c3-eafef4821fab)
+<img width="337" alt="Screenshot 2023-12-05 at 1 01 32 PM" src="https://github.com/nvanhand/ME6705/assets/73389036/50ffb9de-bdb9-43c7-bff6-e4fddfaed271">
 
 
 # Project Demo 
