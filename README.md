@@ -8,7 +8,6 @@ In order to address this need, Team 1 has chosen to model a 1D Touch probe syste
 # Requirements
 ## Table of Requirements
 
-
 | Category | No. | Threshold/Objective* | Requirement | Value | Unit |
 | :------: | --- | :-------------------: | ------------ | ----- | ---- |
 | Interface | 1 | T | Users shall interface with the prototype via a LabView front panel. | T/F |  |
@@ -113,6 +112,33 @@ While the system itself was functional, a substantial challenge was in creating 
 ### Measurement Validation 
 Finally, a significant challenge was the actual validation process. While the project objectives may have had sub-milimeter goals in accuracy, the tools available made it difficult to validate at such a small distance. While calipers could be used to verify short distances, moving the probe along the extent of the X-space required using a system which had measurement in the milimeters such as a tape measure or ruler. 
 
+### Latency 
+It was desired to understand the system latency. We define latency in two ways: (1) Network latency, the amount of time required for device communication between the computer and the myRio, (2) Measurement latency, the amount of time between initiating the "measurement action" and the measurement actually being taken. 
+
+For network latency, we may simply ping the myRio address as shown in the figure. We may observe that the average latency is 6ms. 
+
+![image](https://github.com/nvanhand/ME6705/assets/73389036/c1469bc8-de03-42c3-b4b1-340b73246831)
+
+To determine measurement latency, we define this to be the time between the limit switch being triggered and the measurement value being recorded. We anticipate that this value will be larger than the network latency, since the time for signals to be sent and received has this delay inherent. We utilized the Tick Count function and found the difference between the measured value at the desired points in the program.  
+
+| Trial Number | Latency (ms) |
+|--------------|--------------|
+|      1       |      13      |
+|      2       |      8       |
+|      3       |      18      |
+|      4       |      17      |
+|      5       |      13      |
+|      6       |      13      |
+|      7       |      13      |
+|      8       |      13      |
+|      9       |      13      |
+|      10      |      13      |
+|      11      |      13      |
+|      12      |      12      |
+
+The average measurement latency was found to be about 13 ms. 
+
+
 # Conclusions
 ## Measurement Validation
 To determine accuracy, an object was placed a known distance away from the probe. The system offset and translation was set to accurately reflect this value. Then, objects were placed at multiple distances and measured. The results were as follows. 
@@ -124,7 +150,6 @@ To determine accuracy, an object was placed a known distance away from the probe
 | 20      | 21.0021  |
 | 25      | 26.4533  |
 | 30      | 30.989   |
-
 
 Notably, measurements were, in every case, larger than the actual. By remeasuring the offset to be 1mm less, the accuracy is within desired 1mm value. 
 
