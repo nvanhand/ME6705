@@ -86,7 +86,8 @@ Some of the code from the Measurement Routine is shown in the following figure. 
 ![Measure Routine](https://github.com/nvanhand/ME6705/assets/73389036/5da2e9d3-b256-4a36-91c3-81744e5d5c44)
 
 ## Demo Video 
-https://photos.app.goo.gl/qA9P3V56hwaFqnu39 
+Video 1: https://photos.app.goo.gl/zQzwp5QSm175Lv2G8
+Video 2: https://photos.app.goo.gl/qA9P3V56hwaFqnu39 
 
 # Challenges
 While much of the Labview was built on the foundation that had been developed in class, there were many learning opportunities in the prototype assembly. 
@@ -94,12 +95,31 @@ While much of the Labview was built on the foundation that had been developed in
 As no wireless connectivity was covered in class, Team 1 needed to learn how to connect the myRio wirelessly. The local reference files on Labview were referenced to begin this process. Issues were had when trying to replicate this on campus, as the Mechatronics lab computers prevented network configuration due to lack of administrative permissions. Additionally, configuring wireless devices on the primarily eduroam network was prohibited, so permissions were attempted to be configured over GTOther, the network designed for this end. However, getting a password to connect to the network first requires an initial connection to the GTOther network. Ultimately, Team 1 decided to only demonstrate the prototype on a home network to circumvent further IT related issues. 
 
 ### Mechanical Assembly
-To drive the probe tip and compute distance travelled, a mechanical assembly was necessary. In order to track the distance travelled, the motor encoder assembly was connected to a lead screw. The motor would turn the screw, driving any attachments forward such as a block that came with the system. However, when mounted onto a board, the friction caused difficulty, requiring the metal block to be faced. Additionally, a custom shaft coupling had to be manufactured to fit the motor to the lead screw assembly. 
+To drive the probe tip and compute distance travelled, a mechanical assembly was necessary. In order to track the distance travelled, the motor encoder assembly was connected to a lead screw. The motor would turn the screw, driving any attachments forward such as a block that came with the system. However, when mounted onto a board, the friction caused difficulty, requiring the metal block to be faced. 
 
-The limit switch had a significant deflection distance required to register contact. Thus, the roller arm had to be mounted to decrease this difference, and the deflection had to be accounted for in the calculated measurement. 
+To connect the motor to the , a custom shaft coupling had to be manufactured to fit the motor to the lead screw assembly. 
+
+The limit switch had a significant deflection distance required to register contact. Thus, the roller arm had to be mounted to decrease this difference, and the deflection had to be accounted for in the calculated measurement. Additionally, the actuation of the limit switch was initially too significant for the motor to reasonably accomplish. The mechanical assembly had to be modified to lessen the force required for switching. 
+
+### Assembly Stability
+While the system itself was functional, a substantial challenge was in creating an even surface to test. The Plywood that was chosen to mount the lead screw lacked evenness and weight, which made external weight required when testing, as the motor-limit switch force was able to move the entire assembly during contact. Addditionally, because the lead screw block had been faced, a small amount of rotational freedom allowed the block to spin before stopping. While not significant, this slight shift caused a non-trivial amount of rotation of the probe arm. This may cause unforseen error depending on the geometry of the measured object.  
+
+### Measurement Validation 
+Finally, a significant challenge was the actual validation process. While the project objectives may have had sub-milimeter goals in accuracy, the tools available made it difficult to validate at such a small distance. While calipers could be used to verify short distances, moving the probe along the extent of the X-space required using a system which had measurement in the milimeters such as a tape measure or ruler. 
 
 ### 
 # Conclusions
+To determine accuracy, an object was placed a known distance away from the probe. The system offset and translation was set to accurately reflect this value. Then, objects were placed at multiple distances and measured. The results were as follows. 
+| ActuaL      | Measured |
+| ----------- | ----------- |
+| 10      | 11.2033       |
+| 15   | 15.861        |
+| 20      | 21.0021       |
+| 25   | 26.4533        |
+| 30      | 30.989       |
+
+Notably, measurements were, in every case, larger than the actual. By remeasuring the offset to be 1mm less, the accuracy is within desired 1mm value. 
+
 To determine repeatibility, the distance of a fixed object was repeatedly measured. The measurements of 5 trials is provided below:
 
 | Trial      | Result |
@@ -110,6 +130,6 @@ To determine repeatibility, the distance of a fixed object was repeatedly measur
 | 4   | 33.28        |
 | 5      | 33.3357       |
 
-The standard deviation of the process was 0.0787mm, a larger value than the desired, but greater than the threshold value. Measurements were nominally   
+The standard deviation of the process was 0.0787mm, a larger value than the desired, but greater than the threshold value. 
 
 Throughout the process of this project, Team 1 learned many lessons about the reality of developing a touch probe system that can be taken to develop a solution for AMPF machinery. Most importantly, an understanding of how to connect machine positioning to the sensor#####  While the current system is only unidirectional, a more generalizable solution should be able to probe in at least two dimensions. Addiionally, the current limit switch only probes in the positive direction, while a truly applicable solution should be able to be used from both sides. 
