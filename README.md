@@ -44,7 +44,7 @@ In order to address this need, Team 1 has chosen to model a 1D Touch probe syste
 |  | 33 | O | Prototype goes above and beyond with exploring advanced mechatronics concept | T/F |  |
 ## Discussion 
 The previous section will be discussed in further depth in this section. 
-https://www.ni.com/docs/en-US/bundle/labview-myrio-toolkit/page/myriohelp/myrio_latency_n_samples.html 
+
 ### Project Requirements, Quality Control
 The project and quality control requirements were provided by the ME 6705 instructor and TAs. The requirements were defined to display basic mastery of the course material, requiring meaningful sensors and actors for the prototype. The designed system utilizes the following sensors and actors:
 |  |  | Purpose |
@@ -107,16 +107,16 @@ While the system itself was functional, a substantial challenge was in creating 
 ### Measurement Validation 
 Finally, a significant challenge was the actual validation process. While the project objectives may have had sub-milimeter goals in accuracy, the tools available made it difficult to validate at such a small distance. While calipers could be used to verify short distances, moving the probe along the extent of the X-space required using a system which had measurement in the milimeters such as a tape measure or ruler. 
 
-### 
 # Conclusions
+## Measurement Validation
 To determine accuracy, an object was placed a known distance away from the probe. The system offset and translation was set to accurately reflect this value. Then, objects were placed at multiple distances and measured. The results were as follows. 
-| ActuaL      | Measured |
+| Actual      | Measured |
 | ----------- | ----------- |
-| 10      | 11.2033       |
-| 15   | 15.861        |
-| 20      | 21.0021       |
-| 25   | 26.4533        |
-| 30      | 30.989       |
+| 10   | 11.2033     |
+| 15   | 15.861      |
+| 20   | 21.0021     |
+| 25   | 26.4533     |
+| 30   | 30.989      |
 
 Notably, measurements were, in every case, larger than the actual. By remeasuring the offset to be 1mm less, the accuracy is within desired 1mm value. 
 
@@ -124,12 +124,17 @@ To determine repeatibility, the distance of a fixed object was repeatedly measur
 
 | Trial      | Result |
 | ----------- | ----------- |
-| 1      | 33.3913       |
-| 2   | 33.1687        |
-| 3      | 33.2243       |
-| 4   | 33.28        |
-| 5      | 33.3357       |
+| 1   | 33.3913  |
+| 2   | 33.1687  |
+| 3   | 33.2243  |
+| 4   | 33.28    |
+| 5   | 33.3357  |
 
 The standard deviation of the process was 0.0787mm, a larger value than the desired, but greater than the threshold value. 
 
-Throughout the process of this project, Team 1 learned many lessons about the reality of developing a touch probe system that can be taken to develop a solution for AMPF machinery. Most importantly, an understanding of how to connect machine positioning to the sensor#####  While the current system is only unidirectional, a more generalizable solution should be able to probe in at least two dimensions. Addiionally, the current limit switch only probes in the positive direction, while a truly applicable solution should be able to be used from both sides. 
+## Lessons Learned and Future Work
+Throughout the process of this project, Team 1 learned many lessons about the reality of developing a touch probe system that can be taken to develop a solution for AMPF machinery. The best takeaway was understanding the challenges of having synchronizing the motion system and sensor. Team 1 was able to apply logic that would be replicable in a machine system. Additionally, a better understanding of the iterative design, build, and debug process was gained. A literacy in reading documentation and specing electrical parts will be a valuable tool moving forward. The system as a whole will not be iterating upon in its current form, rather, the lessons will be applied to a new system with a smaller microcontroller. 
+
+While the current system is only unidirectional, a more generalizable solution should be able to probe in at least two dimensions. Addiionally, the current limit switch only probes in the positive direction, while a truly applicable solution should be able to be used from both sides. 
+
+Finally, another direction that was explored but not fully realized in the final system was utilizing HTTPS to interact with the system. While all the setup was done to make use of the Real Time Web Services, following [this tutorial]([this tutorial](https://learn-cf.ni.com/teach/riodevguide/code/rt_web-service-host.html), the functionality was not included in the final VI, as Team 1 did not opt to develop a website which would have made use of this capability. However, this is still a promising direction to pursue for future study. 
