@@ -51,12 +51,14 @@ The previous section will be discussed in further depth in this section.
 
 ### Project Requirements, Quality Control
 The project and quality control requirements were provided by the ME 6705 instructor and TAs. The requirements were defined to display basic mastery of the course material, requiring meaningful sensors and actors for the prototype. The designed system utilizes the following sensors and actors:
-|  |  | Purpose |
-|---|---|---|
-| Actor 1 | Stepper Motor | Drive measurement probe forward. |
-| Actor 2 | Buzzer  | Audibly indicate when a measurement has been made. |
-| Sensor 1 | Encoder | Accurately measure sensor position. |
-| Sensor 2 | Limit switch | Indicate when the touch probe has made contact.  |
+
+|      |             | Purpose                                       |
+|------|-------------|-----------------------------------------------|
+| Actor 1 | Stepper Motor | Drive measurement probe forward.            |
+| Actor 2 | Buzzer        | Audibly indicate when a measurement has been made. |
+| Sensor 1 | Encoder      | Accurately measure sensor position.         |
+| Sensor 2 | Limit switch | Indicate when the touch probe has made contact. |
+
 
 ### Power
 Power requirements were designed not as threshold characteristics but "nice-to-have" objectives which indicate success as a probe. Touch probes are typically powered externally to the machine via batteries, as the prototype will be. However, the prototype's battery life is expeceted to be much shorter than a typical probe, as the entire assembly must be powered rather than just the probe. 
