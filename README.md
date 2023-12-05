@@ -16,8 +16,8 @@ In order to address this need, Team 1 has chosen to model a 1D Touch probe syste
 | Measurement/Data <br> Capture | 5 | T | Measurement accuracy | 1 | mm |
 |  | 6 | O | Measurement accuracy | 0.1 | mm |
 |  | 7 | T | System uncertainty should be quantified and reported | T/F |  |
-|  | 8 | O | Measurement repeatibility | 0.01 | mm |
-|  | 9 | T | Measurement repeatibility | 0.001 | mm |
+|  | 8 | O | Measurement repeatibility | 0.1 | mm |
+|  | 9 | T | Measurement repeatibility | 0.01 | mm |
 | Wireless | 10 | O | Quantify and report system latency | 1 | s |
 |  | 11 | T | System connects to laptop without wired connection | T/F |  |
 | Feedback | 12 | O | Have external light to indicate Myrio power | T/F |  |
@@ -76,7 +76,17 @@ For any touch probe system, measurement capability is an important metric to qua
 
 
 # Project Demo 
+## Front Panel
+In the figure, the front panel is shown. The X bar acts as both an indicator and control. During "Free" mode, the user can dictate the position of the sensor. When the "Measure" button is pressed, the "X" bar becomes read-only and matches the recorded value. The "Saved Measurement" reads the last value that was measured by measurement mode. 
+![image](https://github.com/nvanhand/ME6705/assets/73389036/1b8cc029-b098-4ec4-95a5-1d89856a2d2e)
 
+## LabView 
+
+Some of the code from the Measurement Routine is shown in the following figure. The measurement routine is a sequence diagram. During the sequence, the motor is driven until the "limit switch" button is manually toggled or the limit switch senses contact. 
+![Measure Routine](https://github.com/nvanhand/ME6705/assets/73389036/5da2e9d3-b256-4a36-91c3-81744e5d5c44)
+
+## Demo Video 
+https://photos.app.goo.gl/qA9P3V56hwaFqnu39 
 
 # Challenges
 While much of the Labview was built on the foundation that had been developed in class, there were many learning opportunities in the prototype assembly. 
@@ -90,4 +100,16 @@ The limit switch had a significant deflection distance required to register cont
 
 ### 
 # Conclusions
-Throughout the process of this project, Team 1 learned many lessons about the reality of developing a touch probe system that can be taken to develop a solution for AMPF machinery. Most importantly, an understanding of how to connect machine positioning to the sensor  While the current system is only unidirectional, a more generalizable solution should be able to probe in at least two dimensions. Addiionally, the current limit switch only probes in the positive direction, while a truly applicable solution should be able to be used from both sides. 
+To determine repeatibility, the distance of a fixed object was repeatedly measured. The measurements of 5 trials is provided below:
+
+| Trial      | Result |
+| ----------- | ----------- |
+| 1      | 33.3913       |
+| 2   | 33.1687        |
+| 3      | 33.2243       |
+| 4   | 33.28        |
+| 5      | 33.3357       |
+
+The standard deviation of the process was 0.0787mm, a larger value than the desired, but greater than the threshold value. Measurements were nominally   
+
+Throughout the process of this project, Team 1 learned many lessons about the reality of developing a touch probe system that can be taken to develop a solution for AMPF machinery. Most importantly, an understanding of how to connect machine positioning to the sensor#####  While the current system is only unidirectional, a more generalizable solution should be able to probe in at least two dimensions. Addiionally, the current limit switch only probes in the positive direction, while a truly applicable solution should be able to be used from both sides. 
